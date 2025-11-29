@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,8 +14,18 @@ public class MovableObject : MonoBehaviour
 
     private Transform player;
     private SpriteRenderer boxRenderer;
+    private Character character;
     private int defaultSortingOrder;
 
+
+    private void OnEnable()
+    {
+        Character.OnAgeChanged += HandleAgeChange;
+    }
+    private void OnDisable()
+    {
+        Character.OnAgeChanged -= HandleAgeChange;
+    }
     void Start()
     {
         // ZnajdŸ gracza automatycznie (musi mieæ tag "Player")
@@ -22,6 +33,7 @@ public class MovableObject : MonoBehaviour
         if (playerObj != null)
         {
             player = playerObj.transform;
+            character = playerObj.GetComponent<Character>();
         }
 
         boxRenderer = GetComponent<SpriteRenderer>();
@@ -36,7 +48,7 @@ public class MovableObject : MonoBehaviour
         if (player == null) return;
 
         // Jeœli naciœniêto E
-        if (Input.GetKeyDown(interactKey))
+        if (Input.GetKeyDown(interactKey) && character.GetAge() == Character.AgeState.Adult)
         {
 
             if (isCarried)
@@ -52,6 +64,15 @@ public class MovableObject : MonoBehaviour
                     PickUp();
                 }
             }
+        }
+    }
+
+    private void HandleAgeChange(int obj)
+    {
+        Character.AgeState ageState = (Character.AgeState)obj;
+        if (ageState != Character.AgeState.Adult && isCarried)
+        {
+            Drop();
         }
     }
 
