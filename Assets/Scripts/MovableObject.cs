@@ -4,36 +4,6 @@ using UnityEngine;
 
 public class MovableObject : MonoBehaviour, IInteractible
 {
-    private SpriteRenderer boxRenderer;
-
-    private void Awake()
-    {
-        boxRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnEnable()
-    {
-        Character.OnMoved += OnMoved;
-    }
-
-    private void OnDisable()
-    {
-        Character.OnMoved -= OnMoved;
-    }
-
-    private void OnMoved(Transform playerT)
-    {
-        var vec2player = transform.position - playerT.position;
-        if(vec2player.y > 0)
-        {
-            boxRenderer.sortingOrder = -1;
-        }
-        else
-        {
-            boxRenderer.sortingOrder = 1;
-        }
-    }
-
     public bool CanInteract(Player2DController controller)
     {
         return Timer.Instance.Stage == Timer.AgeStage.Adult && controller.Item == null;
