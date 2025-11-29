@@ -14,9 +14,9 @@ public class Character : MonoBehaviour
         Dziad,
         Dead
     }
-
     private AgeState _state = AgeState.Kid;
 
+    public AgeState GetAge() { return _state; }
     public void OnAged()
     {
         // Disable old state behaviours
