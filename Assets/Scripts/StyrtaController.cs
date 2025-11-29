@@ -37,9 +37,9 @@ public class StyrtaController : MonoBehaviour
     // Ta funkcja zmienia wygl¹d AUTOMATYCZNIE
     private void HandleAgeChange(int ageIndex)
     {
-        Character.AgeState state = (Character.AgeState)ageIndex;
+        Timer.AgeStage state = (Timer.AgeStage)ageIndex;
 
-        if (state == Character.AgeState.Dziad)
+        if (state == Timer.AgeStage.Dziad)
         {
             isRevealed = true;
             spriteRenderer.sprite = hiddenItemSprite;

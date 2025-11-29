@@ -37,24 +37,24 @@ public class LayerChanger : MonoBehaviour
     private void HandleAgeChange(int ageIndex)
     {
         // Zamieniamy int z powrotem na Enum dla czytelnoœci switcha
-        Character.AgeState ageState = (Character.AgeState)ageIndex;
+        Timer.AgeStage ageState = (Timer.AgeStage)ageIndex;
         string targetLayer = "Default";
 
         switch (ageState)
         {
-            case Character.AgeState.Kid:
+            case Timer.AgeStage.Kid:
                 targetLayer = kidLayerName;
                 break;
 
-            case Character.AgeState.Adult:
+            case Timer.AgeStage.Adult:
                 targetLayer = adultLayerName;
                 break;
 
-            case Character.AgeState.Dziad:
+            case Timer.AgeStage.Dziad:
                 targetLayer = oldLayerName;
                 break;
 
-            case Character.AgeState.Dead:
+            case Timer.AgeStage.Death:
                 targetLayer = deadLayerName;
                 break;
         }

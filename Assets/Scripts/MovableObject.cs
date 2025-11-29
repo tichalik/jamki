@@ -48,7 +48,7 @@ public class MovableObject : MonoBehaviour
         if (player == null) return;
 
         // Jeœli naciœniêto E
-        if (Input.GetKeyDown(interactKey) && character.GetAge() == Character.AgeState.Adult)
+        if (Input.GetKeyDown(interactKey) && character.GetAge() == Timer.AgeStage.Adult)
         {
 
             if (isCarried)
@@ -69,8 +69,8 @@ public class MovableObject : MonoBehaviour
 
     private void HandleAgeChange(int obj)
     {
-        Character.AgeState ageState = (Character.AgeState)obj;
-        if (ageState != Character.AgeState.Adult && isCarried)
+        Timer.AgeStage ageState = (Timer.AgeStage)obj;
+        if (ageState != Timer.AgeStage.Adult && isCarried)
         {
             Drop();
         }
