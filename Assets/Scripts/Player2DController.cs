@@ -34,6 +34,15 @@ public class Player2DController : MonoBehaviour
         Character.OnAgeChanged += OnAge;
 
         Time.timeScale = 1f;
+        inputActions.Player.Crouch.performed += OnPotionUsage;
+    }
+
+    private void OnPotionUsage(InputAction.CallbackContext context)
+    {
+        if (PotionManager.Instance.CanUsePotion()) {
+            Timer.Instance.RevertTime();
+            PotionManager.Instance.SubtractPotion();
+        }
     }
 
     private void OnDisable()
