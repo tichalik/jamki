@@ -1,26 +1,11 @@
 using UnityEngine;
 
-public class StyrtaController : MonoBehaviour
+public class StyrtaController : MonoBehaviour, IInteractible
 {
-    [Header("Wygl¹d")]
-    [SerializeField] private Sprite trashSprite;
-    [SerializeField] private Sprite hiddenItemSprite;
-
-    [Header("Ustawienia")]
-    [SerializeField] private string dialogueMessage = "Znalaz³eœ stary telefon!";
-    [SerializeField] private string item = "telefon";
-
-    private SpriteRenderer spriteRenderer;
-    private bool isRevealed = false;
-
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    [SerializeField] private Rupiec _rupiec;
 
     private void OnEnable()
     {
-        // Zapisujemy siê na zmianê wieku
         Character.OnAgeChanged += HandleAgeChange;
     }
 
@@ -29,46 +14,34 @@ public class StyrtaController : MonoBehaviour
         Character.OnAgeChanged -= HandleAgeChange;
     }
 
-    private void Start()
-    {
-        HandleAgeChange(1);
-    }
-
-    // Ta funkcja zmienia wygl¹d AUTOMATYCZNIE
     private void HandleAgeChange(int ageIndex)
     {
+        if (_rupiec == null) return;
+
         Timer.AgeStage state = (Timer.AgeStage)ageIndex;
 
         if (state == Timer.AgeStage.Dziad)
         {
-            isRevealed = true;
-            spriteRenderer.sprite = hiddenItemSprite;
+            _rupiec.gameObject.SetActive(true);
         }
         else
         {
-            isRevealed = false;
-            spriteRenderer.sprite = trashSprite;
+            _rupiec.gameObject.SetActive(false);
         }
     }
 
-    // Ta funkcja jest wywo³ywana przez gracza klawiszem (np. E)
-    public void Interact()
+    public bool CanInteract(Player2DController controller)
     {
-        if (isRevealed)
-        {
-            // LOGIKA DLA DZIADA (Sukces)
-            Debug.Log($"<color=green>SUKCES:</color> {dialogueMessage}");
+        return Timer.Instance.Stage == Timer.AgeStage.Dziad && _rupiec != null;
+    }
 
-            // Tu mo¿esz dodaæ przedmiot do ekwipunku, np:
-            // Inventory.AddItem("Zegarek");
+    public void Interact(Player2DController controller)
+    {
+        Destroy(_rupiec);
+        _rupiec = null;
+    }
 
-            // Opcjonalnie: Zniszcz stertê po zebraniu
-            // Destroy(gameObject);
-        }
-        else
-        {
-            // LOGIKA DLA RESZTY (Pora¿ka)
-            Debug.Log("To tylko kupa œmierdz¹cych œmieci. Nie bêdê w tym grzebaæ.");
-        }
+    public void OnAged(Player2DController controller)
+    {
     }
 }

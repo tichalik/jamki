@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Character))] // Zabezpieczenie: ten skrypt wymaga skryptu Character obok siebie
 public class LayerChanger : MonoBehaviour
@@ -23,14 +24,7 @@ public class LayerChanger : MonoBehaviour
 
     private void Start()
     {
-        // 3. INICJALIZACJA: Na starcie gry musimy ustawiæ warstwê rêcznie,
-        // bo event OnAgeChanged odpali siê dopiero przy PIERWSZEJ zmianie wieku.
-        var character = GetComponent<Character>();
-        if (character != null)
-        {
-            // Rzutujemy Enum na int, bo twoja funkcja UpdateLayer przyjmuje int (zgodnie z eventem)
-            HandleAgeChange((int)character.GetAge());
-        }
+        HandleAgeChange((int)Timer.Instance.Stage);
     }
 
     // Ta funkcja wykona siê automatycznie, gdy Character wywo³a OnAgeChanged?.Invoke()

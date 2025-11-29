@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public static Action<Transform> OnMoved;
     public static Action<int> OnAgeChanged;
 
     [SerializeField]
@@ -54,5 +55,10 @@ public class Character : MonoBehaviour
              case Timer.AgeStage.Death:
                 break;
         }
+    }
+
+    private void LateUpdate()
+    {
+        OnMoved?.Invoke(transform);
     }
 }
