@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -9,61 +7,52 @@ public class Character : MonoBehaviour
     public static Action<int> OnAgeChanged;
 
     [SerializeField]
-    private Dictionary<AgeState, List<MonoBehaviour>> _behaviours = new();
-
+    private Dictionary<Timer.AgeStage, List<MonoBehaviour>> _behaviours = new();
     [SerializeField] private AnimationControl _animation;
 
-    public enum AgeState
-    {
-        Kid,
-        Adult,
-        Dziad,
-        Dead
-    }
-    [SerializeField]
-    private AgeState _state = AgeState.Kid;
+    public Timer.AgeStage GetAge() { return Timer.Instance.Stage; }
 
-    public AgeState GetAge() { return _state; }
-    public void OnAged()
+    private void OnEnable()
+    {
+        Timer.OnAgeChanged += OnAged;
+    }
+
+    private void OnDisable()
+    {
+        Timer.OnAgeChanged -= OnAged;
+    }
+    private void OnAged(Timer.AgeStage oldStage, Timer.AgeStage newStage)
     {
         // Disable old state behaviours
-        if (_behaviours.ContainsKey(_state))
+        if (_behaviours.ContainsKey(oldStage))
         {
-            foreach (var b in _behaviours[_state])
+            foreach (var b in _behaviours[oldStage])
             {
                 b.enabled = false;
             }
         }
 
-        // Move to next state
-        if (_state != AgeState.Dead)
-        {
-            _state = (AgeState)(((int)_state) + 1);
-        }
-
         // Enable new state behaviours
-        if (_behaviours.ContainsKey(_state))
+        if (_behaviours.ContainsKey(newStage))
         {
-            foreach (var b in _behaviours[_state])
+            foreach (var b in _behaviours[newStage])
             {
                 b.enabled = true;
             }
         }
 
-        OnAgeChanged?.Invoke((int)_state);
+        OnAgeChanged?.Invoke((int)newStage);
 
-        switch(_state)
+        switch(newStage)
         {
-            case AgeState.Kid:
+            case Timer.AgeStage.Kid:
                 break;
-            case AgeState.Adult:
+            case Timer.AgeStage.Adult:
                 break;
-            case AgeState.Dziad:
+            case Timer.AgeStage.Dziad:
                 break;
-             case AgeState.Dead:
+             case Timer.AgeStage.Death:
                 break;
         }
-
-        Debug.Log("Character aged to: " + _state);
     }
 }
