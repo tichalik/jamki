@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
         Dziad,
         Dead
     }
+    [SerializeField]
     private AgeState _state = AgeState.Kid;
 
     public AgeState GetAge() { return _state; }
