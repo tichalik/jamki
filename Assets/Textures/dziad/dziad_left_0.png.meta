@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f768bcf081cdf7e4d921ca1d3fdd220e
+guid: 57ac459402af0fd418aac3e8f9c381c1
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,10 +103,10 @@ TextureImporter:
       name: sprite_0_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 6
         y: 0
-        width: 24
-        height: 42
+        width: 22
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

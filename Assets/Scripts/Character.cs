@@ -1,11 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public static Action<int> OnAgeChanged;
+
     [SerializeField]
     private Dictionary<AgeState, List<MonoBehaviour>> _behaviours = new();
+
+    [SerializeField] private AnimationControl _animation;
 
     public enum AgeState
     {
@@ -13,6 +19,18 @@ public class Character : MonoBehaviour
         Adult,
         Dziad,
         Dead
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(5f);
+        OnAged();
+
+        yield return new WaitForSeconds(5f);
+        OnAged();
+
+        yield return new WaitForSeconds(5f);
+        OnAged();
     }
 
     private AgeState _state = AgeState.Kid;
@@ -42,6 +60,8 @@ public class Character : MonoBehaviour
                 b.enabled = true;
             }
         }
+
+        OnAgeChanged?.Invoke((int)_state);
 
         switch(_state)
         {

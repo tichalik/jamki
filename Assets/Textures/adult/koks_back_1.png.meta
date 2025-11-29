@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f768bcf081cdf7e4d921ca1d3fdd220e
+guid: 50591ec87dc486a46b1a40bee0f573e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 110063094613122208
-    second: sprite_0_0
+      213: -1829460001474382795
+    second: koks_back_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_0_0
+      name: koks_back_1_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 1
         y: 0
-        width: 24
+        width: 30
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ac9b492dc5078100800000000000000
-      internalID: 110063094613122208
+      spriteID: 534755152d37c96e0800000000000000
+      internalID: -1829460001474382795
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite_0_0: 110063094613122208
+      koks_back_1_0: -1829460001474382795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
