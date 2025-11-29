@@ -23,6 +23,15 @@ public class Player2DController : MonoBehaviour
         inputActions.Player.Enable(); // Enable the "Player" action map
         inputActions.Player.Move.performed += OnMove;  // Subscribe to Move
         inputActions.Player.Move.canceled += OnMove;   // For stopping input
+        inputActions.Player.Crouch.performed += OnPotionUsage;
+    }
+
+    private void OnPotionUsage(InputAction.CallbackContext context)
+    {
+        if (PotionManager.Instance.CanUsePotion()) {
+            Timer.Instance.RevertTime();
+            PotionManager.Instance.SubtractPotion();
+        }
     }
 
     private void OnDisable()
