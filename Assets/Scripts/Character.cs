@@ -20,21 +20,10 @@ public class Character : MonoBehaviour
         Dziad,
         Dead
     }
-
-    private IEnumerator Start()
-    {
-        yield return new WaitForSeconds(5f);
-        OnAged();
-
-        yield return new WaitForSeconds(5f);
-        OnAged();
-
-        yield return new WaitForSeconds(5f);
-        OnAged();
-    }
-
+    [SerializeField]
     private AgeState _state = AgeState.Kid;
 
+    public AgeState GetAge() { return _state; }
     public void OnAged()
     {
         // Disable old state behaviours
