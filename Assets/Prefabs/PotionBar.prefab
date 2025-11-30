@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db0ee90d868e2a4299ea9ca446743b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _potionPickupClip: {fileID: 8300000, guid: b14e3ed9c2de3694eb068f586a72bc3c, type: 3}
+  _powerUpClip: {fileID: 8300000, guid: 153b7aae2f6f99d4b92da12d32af14a4, type: 3}
 --- !u!1 &6642138885169577444
 GameObject:
   m_ObjectHideFlags: 0

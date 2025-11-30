@@ -2,6 +2,7 @@ using System;
 using TMPro.EditorUtilities;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
 {
     public static Action OnRestart;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _deadMenuPrefab;
     [SerializeField] private Transform _canvas;
 
+    private AudioSource _audioSource;
     private static GameManager _instance;
     public static GameManager Instance {  get { return _instance; } }
 
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
         Instantiate(_mainMenuPrefab, _canvas);
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public static void StartGame()
@@ -54,5 +58,10 @@ public class GameManager : MonoBehaviour
     {
         OnRestart?.Invoke();
         Instantiate(_instance._deadMenuPrefab, _instance._canvas);
+    }
+
+    public static void PlaySound(AudioClip clip)
+    {
+        _instance._audioSource.PlayOneShot(clip);
     }
 }

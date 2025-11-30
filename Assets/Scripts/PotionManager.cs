@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PotionManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip _potionPickupClip;
+    [SerializeField] private AudioClip _powerUpClip;
     public static PotionManager Instance { get; private set; }
 
     private TextMeshProUGUI countText;
@@ -27,11 +29,13 @@ public class PotionManager : MonoBehaviour
 
     public void AddPotion()
     {
+        GameManager.PlaySound(_potionPickupClip);
         potionCount++;
         countText.text = $"x{potionCount}";
     }
     public void SubtractPotion()
     {
+        GameManager.PlaySound(_powerUpClip);
         potionCount--;
         if (potionCount < 0) potionCount = 0;
         countText.text = $"x{potionCount}";

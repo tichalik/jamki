@@ -17,6 +17,8 @@ public class Player2DController : MonoBehaviour
     private Interactible _shownItem = null;
     private int interactionLayerMask;
 
+    [SerializeField] private AudioClip _interactionClip;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -87,7 +89,7 @@ public class Player2DController : MonoBehaviour
         foreach (var h in hits)
         {
             var interactible = h.GetComponent<Interactible>();
-            if (interactible != null && interactible.CanInteract(this))
+            if (interactible != null && interactible.enabled && interactible.CanInteract(this))
             {
                 float d = Vector2.Distance(transform.position, h.transform.position);
                 if (d < nearestDist)
@@ -139,6 +141,7 @@ public class Player2DController : MonoBehaviour
         if (_shownItem != null)
         {
             _shownItem.Interact(this);
+            GameManager.PlaySound(_interactionClip);
         }
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField] private AudioClip _deadClip;
+
     public static Action<Transform> OnMoved;
     public static Action<int> OnAgeChanged;
 
@@ -66,6 +68,7 @@ public class Character : MonoBehaviour
 
     private IEnumerator RestartGame()
     {
+        GameManager.PlaySound(_deadClip);
         yield return new WaitForSeconds(3f);
         GameManager.GameOver();
     }
