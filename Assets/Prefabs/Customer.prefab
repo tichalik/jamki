@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1334263590771308294}
   - component: {fileID: 7986932197904359915}
-  - component: {fileID: 5795875352465019788}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -74,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 546099407
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayerID: -65497279
+  m_SortingLayer: 6
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1829460001474382795, guid: 50591ec87dc486a46b1a40bee0f573e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -88,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5795875352465019788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142943703623739449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae4daea1d21c58449e780a74604ea8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1545285562954575360
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +98,7 @@ GameObject:
   - component: {fileID: 4046024674251431502}
   - component: {fileID: 3032352256294512399}
   - component: {fileID: 3410807316277684480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,6 +219,14 @@ PrefabInstance:
     - target: {fileID: 4128437992292423236, guid: 4280fa27cfbf77d429dd0bc4aa7e9f14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818088511471918418, guid: 4280fa27cfbf77d429dd0bc4aa7e9f14, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818088511471918418, guid: 4280fa27cfbf77d429dd0bc4aa7e9f14, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -65497279
       objectReference: {fileID: 0}
     - target: {fileID: 8922637522009447868, guid: 4280fa27cfbf77d429dd0bc4aa7e9f14, type: 3}
       propertyPath: m_Name

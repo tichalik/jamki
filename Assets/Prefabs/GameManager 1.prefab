@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5def71f25f0cc214ca08f481992e513a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gamePrefab: {fileID: 7596120541622566068, guid: e3cd4755ac5d951468eefbfa4c17648d, type: 3}
+  _gamePrefab: {fileID: 7596120541622566068, guid: edb41d589411bd74ba80e928c522e3d5, type: 3}
   _mainMenuPrefab: {fileID: 7243766317539190492, guid: d1d5d38124cb0694e8e70218894c4efa, type: 3}
   _gameUIPrefab: {fileID: 1766785421111077582, guid: dd76737ec24bb5f4dada562aadf523bc, type: 3}
   _scoreUIPrefab: {fileID: 7374414623328149857, guid: 2ca070e746c5ef2459dd10669d0c1c92, type: 3}

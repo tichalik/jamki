@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6814767433578739661}
   - component: {fileID: 4032940499989526000}
   - component: {fileID: 1126332111227647581}
-  - component: {fileID: 4423094390483582804}
   - component: {fileID: 8632124897854271176}
   - component: {fileID: 2622008175603686734}
+  - component: {fileID: 1618046865337123544}
   m_Layer: 8
   m_Name: Styrta 1
   m_TagString: Untagged
@@ -107,18 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactionToken: {fileID: 3961904353367000734}
   _rupiec: {fileID: 2796390619161220418}
---- !u!114 &4423094390483582804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990369077966570476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df11ef0dcc042d041a691a5bac39b974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &8632124897854271176
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -210,6 +198,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1618046865337123544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990369077966570476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae4daea1d21c58449e780a74604ea8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2290409596434749948
 PrefabInstance:
   m_ObjectHideFlags: 0
