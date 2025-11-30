@@ -37,7 +37,7 @@ public class StyrtaController : MonoBehaviour, IInteractible
 
     public void Interact(Player2DController controller)
     {
-        Destroy(_rupiec);
+        Destroy(_rupiec.gameObject);
         _rupiec = null;
     }
 
