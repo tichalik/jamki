@@ -14695,6 +14695,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7560236209984622900}
     m_Modifications:
+    - target: {fileID: 677499883088958279, guid: 26746e0b843c2c740ae8f6db9a5ba765, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2114521089306175222, guid: 26746e0b843c2c740ae8f6db9a5ba765, type: 3}
       propertyPath: m_Name
       value: Styrta (1)
@@ -14819,6 +14823,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7560236209984622900}
     m_Modifications:
+    - target: {fileID: 1126332111227647581, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1990369077966570476, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
       propertyPath: m_Name
       value: Styrta 1 (2)
@@ -14921,6 +14929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3360079701358707519, guid: 0d4995772329b5848a3c69e25e030135, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -696475281492993178, guid: eb89d1fb2dd59054b863f6d74c684117, type: 3}
     - target: {fileID: 5614190479698251896, guid: 0d4995772329b5848a3c69e25e030135, type: 3}
       propertyPath: m_Name
       value: Styrta 3
@@ -15008,6 +15020,10 @@ PrefabInstance:
     - target: {fileID: 2704767576982928396, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_Name
       value: Styrta 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582610136432626109, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6954858793931720749, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15133,6 +15149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Styrta 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3582610136432626109, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6954858793931720749, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.0936213
@@ -15257,6 +15277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Styrta 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3582610136432626109, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6954858793931720749, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.684867
@@ -15380,6 +15404,10 @@ PrefabInstance:
     - target: {fileID: 2704767576982928396, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_Name
       value: Styrta 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582610136432626109, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6954858793931720749, guid: 44e52b44774ed6a43a006332492042b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15545,6 +15573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Styrta 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6473681786328262089, guid: 0d4995772329b5848a3c69e25e030135, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15687,6 +15719,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7560236209984622900}
     m_Modifications:
+    - target: {fileID: 677499883088958279, guid: 26746e0b843c2c740ae8f6db9a5ba765, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1896909298223563261, guid: 26746e0b843c2c740ae8f6db9a5ba765, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -15831,6 +15867,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2059362667666367719, guid: 84854ab59695e3b479bcf3a5710b8cd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595494555454465399, guid: 84854ab59695e3b479bcf3a5710b8cd7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456349393958637766, guid: 84854ab59695e3b479bcf3a5710b8cd7, type: 3}
@@ -16351,6 +16391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7560236209984622900}
     m_Modifications:
+    - target: {fileID: 1126332111227647581, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1990369077966570476, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
       propertyPath: m_Name
       value: Styrta 1
@@ -16413,6 +16457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7560236209984622900}
     m_Modifications:
+    - target: {fileID: 1126332111227647581, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1990369077966570476, guid: d981f5840063e584e89d01d8f6a0bdbb, type: 3}
       propertyPath: m_Name
       value: Styrta 1 (1)
