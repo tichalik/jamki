@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64c369b239fa303439a8107ef781eb9e
+guid: 7f80c5f25972faf449d8bdcbb1bc5bef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4200351963322608436
-    second: styrta_maslo_0
+      213: 2057516106615078274
+    second: sprite_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: styrta_maslo_0
+      name: sprite_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43b65713bd5aa4a30800000000000000
-      internalID: 4200351963322608436
+      spriteID: 28dbf6e6ff3cd8c10800000000000000
+      internalID: 2057516106615078274
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      styrta_maslo_0: 4200351963322608436
+      sprite_1_0: 2057516106615078274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a604fca4ec66904468acb6ee7e71ccce
+guid: fbbbe07d16cb1d14d8de8329e6fad960
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3983859739346257478
-    second: styrta_chleb_0
+      213: 3615639980573146384
+    second: clock0 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: styrta_chleb_0
+      name: clock0 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab93949acac76b8c0800000000000000
-      internalID: -3983859739346257478
+      spriteID: 01d33c5e7655d2230800000000000000
+      internalID: 3615639980573146384
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      styrta_chleb_0: -3983859739346257478
+      clock0 1_0: 3615639980573146384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
