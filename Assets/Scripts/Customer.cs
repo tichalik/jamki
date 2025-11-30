@@ -4,7 +4,7 @@ public class Customer : MonoBehaviour, IInteractible
 {
     public bool CanInteract(Player2DController controller)
     {
-        return true; //Ma rupiecia
+        return RupiecUI.Instance.hasRupiec;
     }
 
     public void Interact(Player2DController controller)

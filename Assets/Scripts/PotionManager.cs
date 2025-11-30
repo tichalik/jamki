@@ -16,15 +16,9 @@ public class PotionManager : MonoBehaviour
     }
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
             Instance = this;
-        }
         if (countText == null) countText = GetComponent<TextMeshProUGUI>();
+        potionCount = 0;
     }
     void Start()
     {
