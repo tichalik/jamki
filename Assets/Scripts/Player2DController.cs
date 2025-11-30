@@ -154,5 +154,10 @@ public class Player2DController : MonoBehaviour
     private void OnAge(int age)
     {
         Item?.OnAged(this);
+
+        if((Timer.AgeStage)age == Timer.AgeStage.Death)
+        {
+            enabled = false;
+        }
     }
 }

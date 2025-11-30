@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _mainMenuPrefab;
     [SerializeField] private GameObject _gameUIPrefab;
     [SerializeField] private GameObject _scoreUIPrefab;
+    [SerializeField] private GameObject _deadMenuPrefab;
     [SerializeField] private Transform _canvas;
 
     private static GameManager _instance;
@@ -47,5 +48,11 @@ public class GameManager : MonoBehaviour
         OnRestart?.Invoke();
         _instance._time = Time.time - _instance._time;
         Instantiate(_instance._scoreUIPrefab, _instance._canvas);
+    }
+
+    public static void GameOver()
+    {
+        OnRestart?.Invoke();
+        Instantiate(_instance._deadMenuPrefab, _instance._canvas);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,6 +54,7 @@ public class Character : MonoBehaviour
             case Timer.AgeStage.Dziad:
                 break;
              case Timer.AgeStage.Death:
+                StartCoroutine(RestartGame());
                 break;
         }
     }
@@ -60,5 +62,11 @@ public class Character : MonoBehaviour
     private void LateUpdate()
     {
         OnMoved?.Invoke(transform);
+    }
+
+    private IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(3f);
+        GameManager.GameOver();
     }
 }
