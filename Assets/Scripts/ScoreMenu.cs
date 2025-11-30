@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreMenu : MonoBehaviour
 {
@@ -8,6 +7,6 @@ public class ScoreMenu : MonoBehaviour
 
     private void Awake()
     {
-        _scoreText.SetText($"{(int)GameManager.Instance._time} s");
+        _scoreText.SetText($"{(int)GameManager.Instance._time} sec");
     }
 }
