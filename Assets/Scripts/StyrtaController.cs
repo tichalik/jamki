@@ -39,6 +39,7 @@ public class StyrtaController : MonoBehaviour, IInteractible
     {
         Destroy(_rupiec.gameObject);
         _rupiec = null;
+        RupiecUI.Instance.setRupiecFoundColor();
     }
 
     public void OnAged(Player2DController controller)
