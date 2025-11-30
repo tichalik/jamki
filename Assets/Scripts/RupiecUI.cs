@@ -21,7 +21,7 @@ public class RupiecUI : MonoBehaviour
 
     public void setRupiecFoundColor()
     {
-        rupiecImage.color = Color.green;
+        rupiecImage.color = new Color(0x6c, 0x8e, 0x7f);
         hasRupiec = true;
     }
 }
