@@ -30,7 +30,7 @@ public class MovableObject : MonoBehaviour, IInteractible
     private void Drop(Player2DController controller)
     {
         controller.Item = null;
-        transform.SetParent(null);
+        transform.SetParent(Level.Instance.transform);
     }
 
     public void OnAged(Player2DController controller)

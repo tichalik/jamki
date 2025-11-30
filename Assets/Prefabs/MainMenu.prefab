@@ -504,6 +504,7 @@ MonoBehaviour:
   - {fileID: 1986290812965277656}
   - {fileID: 3998892649448994456}
   scrollSpeed: 50
+  scrolling: 1
 --- !u!114 &1115485144883578884
 MonoBehaviour:
   m_ObjectHideFlags: 0

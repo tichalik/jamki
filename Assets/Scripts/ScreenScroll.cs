@@ -8,6 +8,7 @@ public class ScreenScroll : MonoBehaviour
     [SerializeField] private float scrollSpeed = 50f;
 
     private float spacing; // auto-calculated from first image
+    [SerializeField] private bool scrolling = false;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class ScreenScroll : MonoBehaviour
             _images[i].rectTransform.anchoredPosition =
                 rt.anchoredPosition - new Vector2(0, spacing * i);
         }
+
+        if(!scrolling) enabled = false;
     }
 
     private void Update()
