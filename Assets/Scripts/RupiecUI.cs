@@ -6,6 +6,7 @@ public class RupiecUI : MonoBehaviour
 {
     public static RupiecUI Instance { get; private set; }
     private Image rupiecImage;
+    public bool hasRupiec;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class RupiecUI : MonoBehaviour
             Instance = this;
         }
         if (rupiecImage == null) rupiecImage = GetComponent<Image>();
+        hasRupiec = false;
     }
     void Start()
     {
@@ -27,5 +29,6 @@ public class RupiecUI : MonoBehaviour
     public void setRupiecFoundColor()
     {
         rupiecImage.color = Color.green;
+        hasRupiec = true;
     }
 }
