@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StyrtaController : MonoBehaviour, IInteractible
+public class StyrtaController : Interactible
 {
     [SerializeField] private Rupiec _rupiec;
 
@@ -30,19 +30,19 @@ public class StyrtaController : MonoBehaviour, IInteractible
         }
     }
 
-    public bool CanInteract(Player2DController controller)
+    public override bool CanInteract(Player2DController controller)
     {
         return Timer.Instance.Stage == Timer.AgeStage.Dziad && _rupiec != null;
     }
 
-    public void Interact(Player2DController controller)
+    public override void Interact(Player2DController controller)
     {
         Destroy(_rupiec.gameObject);
         _rupiec = null;
         RupiecUI.Instance.setRupiecFoundColor();
     }
 
-    public void OnAged(Player2DController controller)
+    public override void OnAged(Player2DController controller)
     {
     }
 }

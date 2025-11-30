@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class Customer : MonoBehaviour, IInteractible
+public class Customer : Interactible
 {
-    public bool CanInteract(Player2DController controller)
+    public override bool CanInteract(Player2DController controller)
     {
         return true; //Ma rupiecia
     }
 
-    public void Interact(Player2DController controller)
+    public override void Interact(Player2DController controller)
     {
         GameManager.EndGame();
     }
 
-    public void OnAged(Player2DController controller)
+    public override void OnAged(Player2DController controller)
     {
     }
 }
