@@ -60,6 +60,7 @@ public class Player2DController : MonoBehaviour
 
         inputActions.Player.Disable();
 
+        OnInputChanged?.Invoke(new Vector2());
         Time.timeScale = 1f;
     }
 
