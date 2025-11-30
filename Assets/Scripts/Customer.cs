@@ -4,7 +4,7 @@ public class Customer : Interactible
 {
     public override bool CanInteract(Player2DController controller)
     {
-        return true; //Ma rupiecia
+        return RupiecUI.Instance.hasRupiec;
     }
 
     public override void Interact(Player2DController controller)
