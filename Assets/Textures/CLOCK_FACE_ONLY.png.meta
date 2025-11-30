@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4679649c7b69c3942a2fd2e31bb59e48
+guid: f0a45ed014f54db40a47cb1d12fcaa70
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 609617359114345977
-    second: styrta_tablet_0
+      213: -2012638985850197347
+    second: CLOCK_FACE_ONLY_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: styrta_tablet_0
+      name: CLOCK_FACE_ONLY_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 32
+        y: 5
+        width: 32
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fd1cea12cbc57800800000000000000
-      internalID: 609617359114345977
+      spriteID: d9aeb4b718ba114e0800000000000000
+      internalID: -2012638985850197347
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      styrta_tablet_0: 609617359114345977
+      CLOCK_FACE_ONLY_0: -2012638985850197347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
